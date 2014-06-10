@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Page for Ember Component Library Template</title>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0/handlebars.js"></script>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/ember.js/1.5.1/ember.js"></script>
+
+
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmAvKdzegZjhJqKgWgE9jRxSqspS2byTQ&libraries=places&sensor=true"></script>
+  <script type="text/javascript" src="../build/ember-map.min.js"></script>
+  <script type="text/javascript">
+    App = Ember.Application.createWithMixins(DreamcodeComponents.Register);
+  </script>
+</head>
+<body>
+  <style>
+    #viewport {
+      position: relative;
+      width: 600px;
+      height: 300px;
+    }
+  </style>
+  <script type="text/x-handlebars">
+    <div id="viewport">
+      {{ember-map}}
+    </div>
+  </script>
+</body>
+</html>
