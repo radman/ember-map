@@ -18,6 +18,8 @@
     "bower_components",
     "test",
     "tests",
-    "app"
+    "app",
+    "Gruntfile.js",
+    "package.json"
   ]
 }
