@@ -1,0 +1,22 @@
+{
+  "name": "ember-map",
+  "version": "0.0.0",
+  "authors": [
+    "Radu Vlad <radu@dreamcode.ca>"
+  ],
+  "description": "Map component for Ember.js (using Google Maps)",
+  "keywords": [
+    "ember",
+    "map",
+    "google",
+    "gmap"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
