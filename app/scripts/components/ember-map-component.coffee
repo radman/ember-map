@@ -34,8 +34,8 @@ DreamcodeComponents.EmberMapComponent = Ember.Component.extend
       .attr("style", "position: absolute; width: 100%; height: 100%")
 
     mapOptions =
-      zoom: 16
-      center: new google.maps.LatLng(49.2569777, -123.123904)
+      zoom: @get("zoom")
+      center: new google.maps.LatLng(@get("lat"), @get("lng"))
       mapTypeId: google.maps.MapTypeId.ROADMAP
       disableDefaultUI: true
       zoomControl: true
