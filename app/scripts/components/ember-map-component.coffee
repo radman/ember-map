@@ -42,6 +42,7 @@ DreamcodeComponents.EmberMapComponent = Ember.Component.extend
       disableDefaultUI: true
       zoomControl: true
       zoomControlOptions:
+        style: google.maps.ZoomControlStyle.SMALL
         position: google.maps.ControlPosition.RIGHT_TOP
 
     @map = new google.maps.Map(@canvas[0], mapOptions)
