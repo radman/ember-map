@@ -38,6 +38,9 @@ DreamcodeComponents.EmberMapComponent = Ember.Component.extend
       center: new google.maps.LatLng(49.2569777, -123.123904)
       mapTypeId: google.maps.MapTypeId.ROADMAP
       disableDefaultUI: true
+      zoomControl: true
+      zoomControlOptions:
+        position: google.maps.ControlPosition.RIGHT_TOP
 
     @map = new google.maps.Map(@canvas[0], mapOptions)
     @currentLocationMarker = @buildCurrentLocationMarker()
