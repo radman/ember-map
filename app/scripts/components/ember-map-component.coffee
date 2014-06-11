@@ -19,6 +19,8 @@ DreamcodeComponents.EmberMapComponent = Ember.Component.extend
     @map = DreamcodeComponents.EmberMapComponent.map;
     @currentLocationMarker = DreamcodeComponents.EmberMapComponent.currentLocationMarker;
     @addEventListeners()
+    @centerMap()
+    @updateBounds() if @map.getBounds()
 
     # NOTE: can't use @append because ember is strict about not letting us append elements that already exist in the DOM
     @$().append @canvas # TODO: this is modifying DOM and should be scheduled in run loop
