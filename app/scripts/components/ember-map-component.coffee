@@ -82,12 +82,14 @@ DreamcodeComponents.EmberMapComponent = Ember.Component.extend
 
   addEventListeners: ->
     google.maps.event.addListener @map, "dragend", (event) =>
-      center = @map.getCenter()
-      @set "lat", center.lat()
-      @set "lng", center.lng()
+      Ember.run =>
+        center = @map.getCenter()
+        @set "lat", center.lat()
+        @set "lng", center.lng()
 
     google.maps.event.addListener @map, "zoom_changed", (event) =>
-      @set "zoom", @map.getZoom()
+      Ember.run =>
+        @set "zoom", @map.getZoom()
 
   clearEventListeners: ->
     google.maps.event.clearListeners @map
