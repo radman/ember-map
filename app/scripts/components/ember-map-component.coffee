@@ -20,6 +20,7 @@ DreamcodeComponents.EmberMapComponent = Ember.Component.extend
     @currentLocationMarker = DreamcodeComponents.EmberMapComponent.currentLocationMarker;
     @addEventListeners()
     @centerMap()
+    @updateZoom()
     @updateBounds() if @map.getBounds()
 
     # NOTE: can't use @append because ember is strict about not letting us append elements that already exist in the DOM
@@ -83,6 +84,10 @@ DreamcodeComponents.EmberMapComponent = Ember.Component.extend
     @set "nelng", ne.lng()
   ).observes("lat", "lng", "zoom")
 
+  updateZoom: (-> 
+    @map.setZoom @get("zoom")
+  ).observes("zoom")
+
   addEventListeners: ->
     google.maps.event.addListener @map, "dragend", (event) =>
       Ember.run =>
@@ -96,4 +101,5 @@ DreamcodeComponents.EmberMapComponent = Ember.Component.extend
 
   clearEventListeners: ->
     google.maps.event.clearListeners @map
+
 
