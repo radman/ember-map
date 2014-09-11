@@ -28,7 +28,9 @@
       } else {
         google.maps.event.addListenerOnce(this.map, "bounds_changed", (function(_this) {
           return function() {
-            return _this.updateBounds();
+            return Ember.run(function() {
+              return _this.updateBounds();
+            });
           };
         })(this));
       }

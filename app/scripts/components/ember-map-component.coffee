@@ -26,7 +26,7 @@ DreamcodeComponents.EmberMapComponent = Ember.Component.extend
       @updateBounds()
     else
       google.maps.event.addListenerOnce @map, "bounds_changed", =>
-        @updateBounds()
+        Ember.run => @updateBounds()
 
     # NOTE: can't use @append because ember is strict about not letting us append elements that already exist in the DOM
     @$().append @canvas # TODO: this is modifying DOM and should be scheduled in run loop
